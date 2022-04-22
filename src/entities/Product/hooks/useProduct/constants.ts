@@ -1,0 +1,1 @@
+export const USE_PRODUCT_QUERY_KEY = "USE_PRODUCT";
