@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Image } from "../Image";
 import { ProductsListItemProps } from "./types";
 
 export const ProductsListItem = ({
@@ -14,7 +15,7 @@ export const ProductsListItem = ({
         gap: "1rem",
       }}
     >
-      <img
+      <Image
         style={{ height: "10rem", width: "10rem", objectFit: "cover" }}
         src={product.image}
         alt={product.name}
@@ -24,6 +25,7 @@ export const ProductsListItem = ({
           display: "flex",
           flexDirection: "column",
           gap: "1rem",
+          width: "100%",
         }}
       >
         <Link

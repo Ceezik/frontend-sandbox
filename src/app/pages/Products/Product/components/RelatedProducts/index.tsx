@@ -13,8 +13,8 @@ export const RelatedProducts = ({
   });
 
   return (
-    <div>
-      <h1>Related Products</h1>
+    <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+      <h1 style={{ margin: 0 }}>Related Products</h1>
       {(() => {
         if (isLoading) return <RelatedProductsListSkeleton />;
         if (isError) return <p>Error ...</p>;

@@ -18,7 +18,7 @@ export const Product = (): JSX.Element | null => {
 
   if (isSuccess)
     return (
-      <div>
+      <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
         <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
           <EditProductButton productId={productId} />
           <ProductInfos product={data} />

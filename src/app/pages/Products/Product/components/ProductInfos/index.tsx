@@ -2,7 +2,13 @@ import { ProductInfosProps } from "./types";
 
 export const ProductInfos = ({ product }: ProductInfosProps): JSX.Element => {
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "1rem",
+      }}
+    >
       <div
         style={{
           display: "flex",
@@ -13,7 +19,7 @@ export const ProductInfos = ({ product }: ProductInfosProps): JSX.Element => {
         <h3 style={{ margin: 0 }}>{product.name}</h3>
         <p style={{ margin: 0 }}>{product.price}€</p>
       </div>
-      <p>{product.description}</p>
+      <p style={{ margin: 0 }}>{product.description}</p>
 
       <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
         {product.tags.map((tag) => (
