@@ -3,7 +3,14 @@ import Skeleton from "react-loading-skeleton";
 
 export const ProductsListItemSkeleton = (): JSX.Element => {
   return (
-    <div style={{ padding: "1rem", display: "flex", gap: "1rem" }}>
+    <div
+      style={{
+        padding: "1rem",
+        display: "flex",
+        gap: "1rem",
+        border: "1px solid transparent",
+      }}
+    >
       <Skeleton
         style={{ height: "10rem", width: "10rem", objectFit: "cover" }}
       />
