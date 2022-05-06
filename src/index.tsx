@@ -10,7 +10,6 @@ root.render(<App />);
 
 TODO
 - placeholder/initial data 
-- store product fetched
 - suspense
 
 - perf

@@ -1,17 +1,19 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { useProduct } from "../../../../../entities/Product/hooks/useProduct";
 import { useUpdateProduct } from "../../../../../entities/Product/hooks/useUpdateProduct";
 import { ProductForm } from "../../../../components/ProductForm";
 import { ProductFormSkeleton } from "../../../../components/ProductForm/skeleton";
 import { ProductFormValues } from "../../../../components/ProductForm/types";
 import { ProductURLParams } from "../types";
+import { EditProductProps } from "./types";
 
-export const EditProduct = (): JSX.Element | null => {
+export const EditProduct = ({
+  isLoading,
+  isError,
+  isSuccess,
+  data,
+}: EditProductProps): JSX.Element | null => {
   const { productId } = useParams<ProductURLParams>();
   const navigate = useNavigate();
-  const { isLoading, isError, isSuccess, data } = useProduct({
-    _id: productId,
-  });
   const updateProduct = useUpdateProduct({ _id: productId! });
 
   if (isLoading) return <ProductFormSkeleton />;
