@@ -4,6 +4,7 @@ import { Searchbar } from "../../components/Searchbar";
 import { CreateProductButton } from "./components/CreateProductButton";
 import { ProductsList } from "./components/ProductsList";
 import { ProductsListSkeleton } from "./components/ProductsList/skeleton";
+import { ProductsLayout } from "./layout";
 
 export const Products = (): JSX.Element | null => {
   const [search, setSearch] = useState<undefined | string>(undefined);
@@ -18,19 +19,10 @@ export const Products = (): JSX.Element | null => {
   } = useProducts({ search });
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <Searchbar defaultSearch={search} onSearch={setSearch} />
-        <CreateProductButton />
-      </div>
-
-      {(() => {
+    <ProductsLayout
+      searchbar={<Searchbar defaultSearch={search} onSearch={setSearch} />}
+      createButton={<CreateProductButton />}
+      list={(() => {
         if (isLoading) return <ProductsListSkeleton />;
         if (isError) return <p>Error!</p>;
 
@@ -46,6 +38,6 @@ export const Products = (): JSX.Element | null => {
 
         return null;
       })()}
-    </div>
+    />
   );
 };

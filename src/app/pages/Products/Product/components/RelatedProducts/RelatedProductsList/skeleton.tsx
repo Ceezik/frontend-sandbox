@@ -1,11 +1,12 @@
 import { ProductsListItemSkeleton } from "../../../../../../components/ProductsListItem/skeleton";
+import { RelatedProductsListLayout } from "./layout";
 
 export const RelatedProductsListSkeleton = (): JSX.Element => {
   return (
-    <div>
-      {Array.from({ length: 3 }, (_, idx) => (
+    <RelatedProductsListLayout
+      relatedProducts={Array.from({ length: 3 }, (_, idx) => (
         <ProductsListItemSkeleton key={idx} />
       ))}
-    </div>
+    />
   );
 };

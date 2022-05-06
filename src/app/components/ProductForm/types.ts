@@ -1,3 +1,4 @@
+import React from "react";
 import { Product } from "../../../entities/Product/types";
 
 export type ProductFormValues = {
@@ -11,4 +12,9 @@ export type ProductFormValues = {
 export type ProductFormProps = {
   product?: Product;
   onSubmit: (values: ProductFormValues) => Promise<void>;
+};
+
+export type ProductFormLayoutProps = {
+  form: React.ReactNode;
+  submitButton: React.ReactNode;
 };

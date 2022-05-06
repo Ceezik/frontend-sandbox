@@ -4,6 +4,7 @@ import { useProduct } from "../../../../entities/Product/hooks/useProduct";
 import { EditProductButton } from "./components/EditProductButton";
 import { ProductInfos } from "./components/ProductInfos";
 import { RelatedProducts } from "./components/RelatedProducts";
+import { ProductLayout } from "./layout";
 import { ProductSkeleton } from "./skeleton";
 import { ProductURLParams } from "./types";
 
@@ -18,14 +19,11 @@ export const Product = (): JSX.Element | null => {
 
   if (isSuccess)
     return (
-      <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
-        <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
-          <EditProductButton productId={productId} />
-          <ProductInfos product={data} />
-        </div>
-
-        <RelatedProducts tags={data.tags} />
-      </div>
+      <ProductLayout
+        editButton={<EditProductButton productId={productId} />}
+        productInfos={<ProductInfos product={data} />}
+        relatedProducts={<RelatedProducts tags={data.tags} />}
+      />
     );
 
   return null;

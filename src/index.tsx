@@ -11,7 +11,6 @@ root.render(<App />);
 TODO
 - placeholder/initial data 
 - store product fetched
-- layout 
 - suspense
 
 - perf

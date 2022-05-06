@@ -3,3 +3,7 @@ import { UseProductsReturnType } from "../../../../../../../entities/Product/hoo
 export type RelatedProductsListProps = {
   data: NonNullable<UseProductsReturnType["data"]>;
 };
+
+export type RelatedProductsListLayoutProps = {
+  relatedProducts: React.ReactNode;
+};
