@@ -9,7 +9,6 @@ root.render(<App />);
 /*
 
 TODO
-- placeholder/initial data 
 - suspense
 
 - perf
