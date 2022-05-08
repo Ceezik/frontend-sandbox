@@ -2,9 +2,13 @@ import { Form, Formik } from "formik";
 import React from "react";
 import { DEFAULT_PRODUCT_FORM_VALUES } from "./constants";
 import { ProductFormLayout } from "./layout";
+import { MultiSelectTextInput } from "./MultiSelectTextInput";
 import { TextInput } from "./TextInput";
 import { ProductFormProps } from "./types";
-import { productFormValidationSchema } from "./validation";
+import {
+  productFormValidationSchema,
+  productFormTagValidationSchema,
+} from "./validation";
 
 export const ProductForm = ({
   product,
@@ -36,12 +40,11 @@ export const ProductForm = ({
                   placeholder="Price"
                   label="Price"
                 />
-
-                <TextInput
+                <MultiSelectTextInput
                   name="tags"
-                  disabled
-                  placeholder="Tags"
                   label="Tags"
+                  placeholder="Add a tag"
+                  valueValidationSchema={productFormTagValidationSchema}
                 />
               </>
             }

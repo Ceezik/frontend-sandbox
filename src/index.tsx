@@ -9,13 +9,13 @@ root.render(<App />);
 /*
 
 TODO
+- eslint/prettier
+
 - suspense
 
 - perf
 
-- startTransition
-
-- tags select
+- animations
 
 - ARIA
 
