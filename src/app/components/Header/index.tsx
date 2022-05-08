@@ -9,7 +9,7 @@ export const Header = (): JSX.Element => {
         justifyContent: "space-between",
       }}
     >
-      <p>test react query</p>
+      <p>frontend sandbox</p>
       <div
         style={{
           display: "flex",
