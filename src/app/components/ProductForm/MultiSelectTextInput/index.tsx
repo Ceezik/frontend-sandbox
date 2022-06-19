@@ -13,8 +13,7 @@ export const MultiSelectTextInput = ({
   ...props
 }: MultiSelectTextInputProps): JSX.Element => {
   const [field, meta] = useField<Array<string>>(name);
-  const multiSelectTextInputValidationSchema =
-    buildMultiSelectTextInputValidationSchema({ valueValidationSchema });
+  const multiSelectTextInputValidationSchema = buildMultiSelectTextInputValidationSchema({ valueValidationSchema });
 
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
@@ -22,9 +21,7 @@ export const MultiSelectTextInput = ({
 
       <FieldArray name={name} {...props}>
         {({ remove, push }) => (
-          <div
-            style={{ display: "flex", gap: "0.25rem", flexDirection: "column" }}
-          >
+          <div style={{ display: "flex", gap: "0.25rem", flexDirection: "column" }}>
             <Formik
               onSubmit={({ value }, { resetForm }) => {
                 if (!field.value.includes(value)) push(value);
@@ -51,24 +48,13 @@ export const MultiSelectTextInput = ({
                       alignItems: "center",
                     }}
                   >
-                    <TextInput
-                      disabled={disabled}
-                      placeholder={placeholder}
-                      type="text"
-                      name="value"
-                    />
+                    <TextInput disabled={disabled} placeholder={placeholder} type="text" name="value" />
 
-                    <button
-                      disabled={disabled ?? isSubmitting}
-                      type="button"
-                      onClick={submitForm}
-                    >
+                    <button disabled={disabled ?? isSubmitting} type="button" onClick={submitForm}>
                       {isSubmitting ? "Adding..." : "Add"}
                     </button>
 
-                    {meta.error && meta.touched && (
-                      <div style={{ color: "red" }}>{meta.error}</div>
-                    )}
+                    {meta.error && meta.touched && <div style={{ color: "red" }}>{meta.error}</div>}
                   </div>
                 </div>
               )}
@@ -91,12 +77,7 @@ export const MultiSelectTextInput = ({
                   }}
                 >
                   <div>{value}</div>
-                  <button
-                    type="button"
-                    style={{ color: "red" }}
-                    disabled={disabled}
-                    onClick={() => remove(idx)}
-                  >
+                  <button type="button" style={{ color: "red" }} disabled={disabled} onClick={() => remove(idx)}>
                     x
                   </button>
                 </div>
@@ -106,9 +87,7 @@ export const MultiSelectTextInput = ({
         )}
       </FieldArray>
 
-      {meta.error && meta.touched && (
-        <div style={{ color: "red" }}>{meta.error}</div>
-      )}
+      {meta.error && meta.touched && <div style={{ color: "red" }}>{meta.error}</div>}
     </div>
   );
 };

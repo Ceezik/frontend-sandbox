@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import { DelayedLoaderProps } from "./types";
 
-export const DelayedLoader = ({
-  loader,
-  delay,
-}: DelayedLoaderProps): JSX.Element | null => {
+export const DelayedLoader = ({ loader, delay }: DelayedLoaderProps): JSX.Element | null => {
   const [showLoader, setShowLoader] = useState(false);
 
   useEffect(() => {

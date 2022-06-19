@@ -5,15 +5,9 @@ import { ProductFormLayout } from "./layout";
 import { MultiSelectTextInput } from "./MultiSelectTextInput";
 import { TextInput } from "./TextInput";
 import { ProductFormProps } from "./types";
-import {
-  productFormValidationSchema,
-  productFormTagValidationSchema,
-} from "./validation";
+import { productFormValidationSchema, productFormTagValidationSchema } from "./validation";
 
-export const ProductForm = ({
-  product,
-  onSubmit,
-}: ProductFormProps): JSX.Element => {
+export const ProductForm = ({ product, onSubmit }: ProductFormProps): JSX.Element => {
   return (
     <Formik
       onSubmit={onSubmit}
@@ -28,18 +22,9 @@ export const ProductForm = ({
             form={
               <>
                 <TextInput name="name" placeholder="Name" label="Name" />
-                <TextInput
-                  name="description"
-                  placeholder="Description"
-                  label="Description"
-                />
+                <TextInput name="description" placeholder="Description" label="Description" />
                 <TextInput name="image" placeholder="Image URL" label="Image" />
-                <TextInput
-                  name="price"
-                  type="number"
-                  placeholder="Price"
-                  label="Price"
-                />
+                <TextInput name="price" type="number" placeholder="Price" label="Price" />
                 <MultiSelectTextInput
                   name="tags"
                   label="Tags"

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import { ImageProps } from "./types";
 
-export const Image = ({ loader, style, ...props }: ImageProps): JSX.Element => {
+export const Image = ({ style, ...props }: ImageProps): JSX.Element => {
   const [loading, setLoading] = useState(true);
 
   const handleLoad = () => {

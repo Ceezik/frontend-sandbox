@@ -1,10 +1,6 @@
 import { ProductsListItemLayoutProps } from "./types";
 
-export const ProductsListItemLayout = ({
-  image,
-  name,
-  description,
-}: ProductsListItemLayoutProps): JSX.Element => {
+export const ProductsListItemLayout = ({ image, name, description }: ProductsListItemLayoutProps): JSX.Element => {
   return (
     <div
       style={{

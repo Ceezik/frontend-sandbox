@@ -8,15 +8,9 @@ import { ProductsLayout } from "./layout";
 
 export const Products = (): JSX.Element | null => {
   const [search, setSearch] = useState<undefined | string>(undefined);
-  const {
-    isSuccess,
-    data,
-    isError,
-    isLoading,
-    isFetchingNextPage,
-    fetchNextPage,
-    hasNextPage,
-  } = useProducts({ search });
+  const { isSuccess, data, isError, isLoading, isFetchingNextPage, fetchNextPage, hasNextPage } = useProducts({
+    search,
+  });
 
   return (
     <ProductsLayout

@@ -7,12 +7,7 @@ import { ProductLayout } from "./layout";
 import { ProductSkeleton } from "./skeleton";
 import { ProductProps, ProductURLParams } from "./types";
 
-export const Product = ({
-  isLoading,
-  isError,
-  isSuccess,
-  data,
-}: ProductProps): JSX.Element | null => {
+export const Product = ({ isLoading, isError, isSuccess, data }: ProductProps): JSX.Element | null => {
   const { productId } = useParams<ProductURLParams>();
 
   if (isLoading) return <ProductSkeleton />;

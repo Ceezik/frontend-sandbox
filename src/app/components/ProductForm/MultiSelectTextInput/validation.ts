@@ -5,5 +5,4 @@ const valueDefaultValidationSchema = Yup.string().required();
 
 export const buildMultiSelectTextInputValidationSchema = ({
   valueValidationSchema = valueDefaultValidationSchema,
-}: Pick<MultiSelectTextInputProps, "valueValidationSchema">) =>
-  Yup.object({ value: valueValidationSchema });
+}: Pick<MultiSelectTextInputProps, "valueValidationSchema">) => Yup.object({ value: valueValidationSchema });

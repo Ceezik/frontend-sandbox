@@ -17,16 +17,10 @@ export const Header = (): JSX.Element => {
           gap: "1rem",
         }}
       >
-        <NavLink
-          style={({ isActive }) => ({ color: isActive ? "red" : "black" })}
-          to="/"
-        >
+        <NavLink style={({ isActive }) => ({ color: isActive ? "red" : "black" })} to="/">
           Home
         </NavLink>
-        <NavLink
-          style={({ isActive }) => ({ color: isActive ? "red" : "black" })}
-          to="/products"
-        >
+        <NavLink style={({ isActive }) => ({ color: isActive ? "red" : "black" })} to="/products">
           Products
         </NavLink>
       </div>

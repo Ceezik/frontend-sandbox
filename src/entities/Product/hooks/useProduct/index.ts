@@ -18,10 +18,7 @@ const getInitialData = ({
   queryClient: QueryClient;
   productId: UseProductProps["_id"];
 }): Product | undefined => {
-  const cached = queryClient.getQueryData<UseProductsReturnType["data"]>(
-    USE_PRODUCTS_QUERY_KEY,
-    { exact: false }
-  );
+  const cached = queryClient.getQueryData<UseProductsReturnType["data"]>(USE_PRODUCTS_QUERY_KEY, { exact: false });
   if (!cached) return undefined;
 
   return cached.pages
@@ -33,12 +30,8 @@ const getInitialData = ({
 export const useProduct = (props: UseProductProps): UseProductReturnType => {
   const queryClient = useQueryClient();
 
-  return useQuery(
-    buildUseProductQueryKey(props),
-    () => fetchProduct(props._id!),
-    {
-      enabled: !!props._id,
-      initialData: () => getInitialData({ queryClient, productId: props._id }),
-    }
-  );
+  return useQuery(buildUseProductQueryKey(props), () => fetchProduct(props._id!), {
+    enabled: !!props._id,
+    initialData: () => getInitialData({ queryClient, productId: props._id }),
+  });
 };

@@ -4,7 +4,7 @@ import { ProductForm } from "../../../components/ProductForm";
 import { ProductFormValues } from "../../../components/ProductForm/types";
 
 export const CreateProduct = (): JSX.Element => {
-  const createProduct = useCreateProduct({});
+  const createProduct = useCreateProduct();
   const navigate = useNavigate();
 
   const handleCreateProduct = async (values: ProductFormValues) => {

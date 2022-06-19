@@ -1,8 +1,6 @@
 import { RelatedProductsListLayoutProps } from "./types";
 
-export const RelatedProductsListLayout = ({
-  relatedProducts,
-}: RelatedProductsListLayoutProps): JSX.Element => {
+export const RelatedProductsListLayout = ({ relatedProducts }: RelatedProductsListLayoutProps): JSX.Element => {
   return (
     <div
       style={{

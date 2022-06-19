@@ -5,9 +5,7 @@ import { RelatedProductsList } from "./RelatedProductsList";
 import { RelatedProductsListSkeleton } from "./RelatedProductsList/skeleton";
 import { RelatedProductsProps } from "./types";
 
-export const RelatedProducts = ({
-  tags,
-}: RelatedProductsProps): JSX.Element => {
+export const RelatedProducts = ({ tags }: RelatedProductsProps): JSX.Element => {
   const { isError, isLoading, isSuccess, data } = useProducts({
     count: 3,
     tags,

@@ -1,11 +1,6 @@
 import { ProductInfosLayoutProps } from "./types";
 
-export const ProductInfosLayout = ({
-  name,
-  price,
-  description,
-  tags,
-}: ProductInfosLayoutProps): JSX.Element => {
+export const ProductInfosLayout = ({ name, price, description, tags }: ProductInfosLayoutProps): JSX.Element => {
   return (
     <div
       style={{
@@ -26,9 +21,7 @@ export const ProductInfosLayout = ({
       </div>
       {description}
 
-      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
-        {tags}
-      </div>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>{tags}</div>
     </div>
   );
 };

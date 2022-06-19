@@ -14,10 +14,7 @@ export const ProductRouter = (): JSX.Element => {
   return (
     <Routes>
       <Route index element={<ProductLoadable {...useProductState} />} />
-      <Route
-        path="edit"
-        element={<EditProductLoadable {...useProductState} />}
-      />
+      <Route path="edit" element={<EditProductLoadable {...useProductState} />} />
     </Routes>
   );
 };

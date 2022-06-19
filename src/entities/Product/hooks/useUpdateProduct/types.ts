@@ -4,8 +4,4 @@ import { Product } from "../../types";
 
 export type UseUpdateProductProps = { _id: string };
 
-export type UseUpdateProductReturnType = UseMutationResult<
-  Product,
-  unknown,
-  ProductFormValues
->;
+export type UseUpdateProductReturnType = UseMutationResult<Product, unknown, ProductFormValues>;

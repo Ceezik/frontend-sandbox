@@ -1,9 +1,6 @@
 import * as Yup from "yup";
 
-export const productFormTagValidationSchema = Yup.string()
-  .required()
-  .min(3)
-  .max(50);
+export const productFormTagValidationSchema = Yup.string().required().min(3).max(50);
 
 export const productFormValidationSchema = Yup.object({
   name: Yup.string().required().min(3).max(50),

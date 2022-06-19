@@ -2,9 +2,7 @@ import { ProductsListItem } from "../../../../../../components/ProductsListItem"
 import { RelatedProductsListLayout } from "./layout";
 import { RelatedProductsListProps } from "./types";
 
-export const RelatedProductsList = ({
-  data,
-}: RelatedProductsListProps): JSX.Element => {
+export const RelatedProductsList = ({ data }: RelatedProductsListProps): JSX.Element => {
   return (
     <RelatedProductsListLayout
       relatedProducts={data.pages

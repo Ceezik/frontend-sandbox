@@ -1,5 +1,4 @@
 import React from "react";
-import InfiniteScroll from "react-infinite-scroller";
 import { ProductsListItem } from "../../../../components/ProductsListItem";
 import { ProductsListItemSkeleton } from "../../../../components/ProductsListItem/skeleton";
 import { ProductsListLayout } from "./layout";

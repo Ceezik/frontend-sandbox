@@ -6,12 +6,7 @@ import { ProductFormValues } from "../../../../components/ProductForm/types";
 import { ProductURLParams } from "../types";
 import { EditProductProps } from "./types";
 
-export const EditProduct = ({
-  isLoading,
-  isError,
-  isSuccess,
-  data,
-}: EditProductProps): JSX.Element | null => {
+export const EditProduct = ({ isLoading, isError, isSuccess, data }: EditProductProps): JSX.Element | null => {
   const { productId } = useParams<ProductURLParams>();
   const navigate = useNavigate();
   const updateProduct = useUpdateProduct({ _id: productId! });
@@ -24,8 +19,7 @@ export const EditProduct = ({
     navigate(`/products/${productId}`);
   };
 
-  if (isSuccess)
-    return <ProductForm product={data} onSubmit={handleEditProduct} />;
+  if (isSuccess) return <ProductForm product={data} onSubmit={handleEditProduct} />;
 
   return null;
 };
