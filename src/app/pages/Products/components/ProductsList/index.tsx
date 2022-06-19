@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { ProductsListItem } from "../../../../components/ProductsListItem";
 import { ProductsListItemSkeleton } from "../../../../components/ProductsListItem/skeleton";
 import { ProductsListLayout } from "./layout";
@@ -10,6 +10,15 @@ export const ProductsList = ({
   hasNextPage,
   data,
 }: ProductsListProps): JSX.Element => {
+  const products = useMemo(
+    () =>
+      data.pages
+        .map((page) => page.products)
+        .flat()
+        .map((product) => <ProductsListItem product={product} key={product._id} />),
+    [data.pages]
+  );
+
   return (
     <ProductsListLayout
       infiniteScrollParams={{
@@ -17,12 +26,7 @@ export const ProductsList = ({
         hasMore: hasNextPage ?? false,
         loader: <ProductsListItemSkeleton key="loader" />,
       }}
-      products={data.pages
-        .map((page) => page.products)
-        .flat()
-        .map((product) => (
-          <ProductsListItem product={product} key={product._id} />
-        ))}
+      products={products}
     />
   );
 };

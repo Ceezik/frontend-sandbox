@@ -1,25 +1,18 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useProducts } from "../../../../../../entities/Product/hooks/useProducts";
 import { RelatedProductsLayout } from "./layout";
-import { RelatedProductsList } from "./RelatedProductsList";
-import { RelatedProductsListSkeleton } from "./RelatedProductsList/skeleton";
+import { RelatedProductsListWrapper } from "./RelatedProductsListWrapper";
 import { RelatedProductsProps } from "./types";
 
 export const RelatedProducts = ({ tags }: RelatedProductsProps): JSX.Element => {
-  const { isError, isLoading, isSuccess, data } = useProducts({
+  const useProductsState = useProducts({
     count: 3,
     tags,
   });
 
-  return (
-    <RelatedProductsLayout
-      title={<h1 style={{ margin: 0 }}>Related Products</h1>}
-      relatedProducts={(() => {
-        if (isLoading) return <RelatedProductsListSkeleton />;
-        if (isError) return <p>Error ...</p>;
+  const relatedProducts = useMemo(() => <RelatedProductsListWrapper {...useProductsState} />, [useProductsState]);
 
-        if (isSuccess) return <RelatedProductsList data={data} />;
-      })()}
-    />
+  return (
+    <RelatedProductsLayout title={<h1 style={{ margin: 0 }}>Related Products</h1>} relatedProducts={relatedProducts} />
   );
 };

@@ -9,12 +9,6 @@ root.render(<App />);
 /*
 
 TODO
-- eslint/prettier
-
-- suspense
-
-- perf
-
 - animations
 
 - ARIA
