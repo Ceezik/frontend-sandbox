@@ -3,7 +3,7 @@ import { lazyLoad } from "../../../../helpers/lazyLoad";
 import { ProductSkeleton } from "./skeleton";
 
 export const ProductLoadable = lazyLoad(
-  () => import("./index"),
+  () => import(/* webpackChunkName: 'pages.products.product' */ "./index"),
   (module) => module.Product,
   {
     fallback: <ProductSkeleton />,
