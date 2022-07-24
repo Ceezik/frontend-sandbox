@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "projects": {
-    "frontend-sandbox": "apps/frontend-sandbox"
-  }
+    "version": 2,
+    "projects": {
+        "web-app": "apps/web-app"
+    }
 }
