@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from "react";
-import { DelayedLoader } from "../app/components/DelayedLoader";
+import { DelayedLoader } from "@/app/components/DelayedLoader";
 import { Unpromisify } from "./types/Unpromisify";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

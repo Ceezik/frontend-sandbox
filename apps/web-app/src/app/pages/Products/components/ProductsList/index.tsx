@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
-import { ProductsListItem } from "../../../../components/ProductsListItem";
-import { ProductsListItemSkeleton } from "../../../../components/ProductsListItem/skeleton";
+import { ProductsListItem } from "@/app/components/ProductsListItem";
+import { ProductsListItemSkeleton } from "@/app/components/ProductsListItem/skeleton";
 import { ProductsListLayout } from "./layout";
 import { ProductsListProps } from "./types";
 

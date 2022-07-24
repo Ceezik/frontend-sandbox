@@ -1,5 +1,5 @@
 import React from "react";
-import { lazyLoad } from "../../../../helpers/lazyLoad";
+import { lazyLoad } from "@/helpers/lazyLoad";
 import { ProductSkeleton } from "./skeleton";
 
 export const ProductLoadable = lazyLoad(

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { ProductsListItem } from "../../../../../../components/ProductsListItem";
+import { ProductsListItem } from "@/app/components/ProductsListItem";
 import { RelatedProductsListLayout } from "./layout";
 import { RelatedProductsListProps } from "./types";
 

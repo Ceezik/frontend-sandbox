@@ -1,4 +1,4 @@
-import { ProductsListItemSkeleton } from "../../../../../../components/ProductsListItem/skeleton";
+import { ProductsListItemSkeleton } from "@/app/components/ProductsListItem/skeleton";
 import { RelatedProductsListLayout } from "./layout";
 
 export const RelatedProductsListSkeleton = (): JSX.Element => {

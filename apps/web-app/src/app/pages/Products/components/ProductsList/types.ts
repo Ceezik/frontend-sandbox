@@ -1,4 +1,4 @@
-import { UseProductsReturnType } from "../../../../../entities/Product/hooks/useProducts/types";
+import { UseProductsReturnType } from "@/entities/Product/hooks/useProducts/types";
 import InfiniteScroll from "react-infinite-scroller";
 
 export type ProductsListProps = Pick<UseProductsReturnType, "isFetchingNextPage" | "fetchNextPage" | "hasNextPage"> & {

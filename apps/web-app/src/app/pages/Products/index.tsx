@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
-import { useProducts } from "../../../entities/Product/hooks/useProducts";
-import { Searchbar } from "../../components/Searchbar";
+import { useProducts } from "@/entities/Product/hooks/useProducts";
+import { Searchbar } from "@/app/components/Searchbar";
 import { CreateProductButton } from "./components/CreateProductButton";
 import { ProductsListWrapper } from "./components/ProductsListWrapper";
 import { ProductsLayout } from "./layout";

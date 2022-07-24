@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes, useParams } from "react-router-dom";
-import { useProduct } from "../../../../entities/Product/hooks/useProduct";
+import { useProduct } from "@/entities/Product/hooks/useProduct";
 import { EditProductLoadable } from "./EditProduct/loadable";
 import { ProductLoadable } from "./loadable";
 import { ProductURLParams } from "./types";

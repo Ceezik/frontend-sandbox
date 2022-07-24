@@ -1,5 +1,5 @@
 import { useInfiniteQuery } from "react-query";
-import { axios } from "../../../../api/axios";
+import { axios } from "@/api/axios";
 import { Product } from "../../types";
 import { buildUseProductsQueryKey } from "./helpers/buildUseProductsQueryKey";
 import { UseProductsProps, UseProductsReturnType } from "./types";

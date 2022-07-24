@@ -1,5 +1,5 @@
 import React from "react";
-import { useProduct } from "../../../../entities/Product/hooks/useProduct";
+import { useProduct } from "@/entities/Product/hooks/useProduct";
 
 export type ProductURLParams = {
     productId: string;

@@ -1,5 +1,5 @@
 import { useQuery, useQueryClient, QueryClient } from "react-query";
-import { axios } from "../../../../api/axios";
+import { axios } from "@/api/axios";
 import { Product } from "../../types";
 import { USE_PRODUCTS_QUERY_KEY } from "../useProducts/constants";
 import { UseProductsReturnType } from "../useProducts/types";

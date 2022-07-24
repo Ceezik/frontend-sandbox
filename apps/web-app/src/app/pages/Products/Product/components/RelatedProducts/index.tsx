@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { useProducts } from "../../../../../../entities/Product/hooks/useProducts";
+import { useProducts } from "@/entities/Product/hooks/useProducts";
 import { RelatedProductsLayout } from "./layout";
 import { RelatedProductsListWrapper } from "./RelatedProductsListWrapper";
 import { RelatedProductsProps } from "./types";

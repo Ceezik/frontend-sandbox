@@ -1,5 +1,5 @@
 import baseAxios from "axios";
-import { getApiUrl } from "../helpers/getApiUrl";
+import { getApiUrl } from "@/helpers/getApiUrl";
 
 export const axios = baseAxios.create({
     baseURL: getApiUrl(),

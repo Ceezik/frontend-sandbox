@@ -1,4 +1,4 @@
-import { SearchbarSkeleton } from "../../components/Searchbar/skeleton";
+import { SearchbarSkeleton } from "@/app/components/Searchbar/skeleton";
 import { CreateProductButtonSkeleton } from "./components/CreateProductButton/skeleton";
 import { ProductsListSkeleton } from "./components/ProductsList/skeleton";
 import { ProductsLayout } from "./layout";

@@ -1,6 +1,6 @@
+import { axios } from "@/api/axios";
 import { useMutation, useQueryClient } from "react-query";
-import { axios } from "../../../../api/axios";
-import { ProductFormValues } from "../../../../app/components/ProductForm/types";
+import { ProductFormValues } from "@/app/components/ProductForm/types";
 import { Product } from "../../types";
 import { USE_PRODUCTS_QUERY_KEY } from "../useProducts/constants";
 import { UseCreateProductReturnType } from "./types";

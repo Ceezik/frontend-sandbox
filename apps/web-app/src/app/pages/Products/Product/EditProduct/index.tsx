@@ -1,8 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { useUpdateProduct } from "../../../../../entities/Product/hooks/useUpdateProduct";
-import { ProductForm } from "../../../../components/ProductForm";
-import { ProductFormSkeleton } from "../../../../components/ProductForm/skeleton";
-import { ProductFormValues } from "../../../../components/ProductForm/types";
+import { useUpdateProduct } from "@/entities/Product/hooks/useUpdateProduct";
+import { ProductForm } from "@/app/components/ProductForm";
+import { ProductFormSkeleton } from "@/app/components/ProductForm/skeleton";
+import { ProductFormValues } from "@/app/components/ProductForm/types";
 import { ProductURLParams } from "../types";
 import { EditProductProps } from "./types";
 

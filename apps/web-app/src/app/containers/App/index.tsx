@@ -1,9 +1,9 @@
 import React from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Header } from "../../components/Header";
-import { HomeRouter } from "../../pages/Home/router";
-import { ProductsRouter } from "../../pages/Products/router";
+import { Header } from "@/app/components/Header";
+import { HomeRouter } from "@/app/pages/Home/router";
+import { ProductsRouter } from "@/app/pages/Products/router";
 
 const queryClient = new QueryClient({
     defaultOptions: {

@@ -1,5 +1,5 @@
 import React from "react";
-import { Product } from "../../../entities/Product/types";
+import { Product } from "@/entities/Product/types";
 
 export type ProductFormValues = {
     name: string;

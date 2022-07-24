@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { useCreateProduct } from "../../../../entities/Product/hooks/useCreateProduct";
-import { ProductForm } from "../../../components/ProductForm";
-import { ProductFormValues } from "../../../components/ProductForm/types";
+import { useCreateProduct } from "@/entities/Product/hooks/useCreateProduct";
+import { ProductForm } from "@/app/components/ProductForm";
+import { ProductFormValues } from "@/app/components/ProductForm/types";
 
 export const CreateProduct = (): JSX.Element => {
     const createProduct = useCreateProduct();
